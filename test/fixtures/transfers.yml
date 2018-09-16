@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  hs: MyString
+  lender: MyString
+  borrower: MyString
+  value: 1
+  ts: 2018-09-16 15:13:26
+  user: one
+
+two:
+  hs: MyString
+  lender: MyString
+  borrower: MyString
+  value: 1
+  ts: 2018-09-16 15:13:26
+  user: two

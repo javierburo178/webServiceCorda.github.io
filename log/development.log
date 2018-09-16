@@ -1258,3 +1258,540 @@ Processing by Rails::WelcomeController#index as HTML
 Completed 200 OK in 102ms (Views: 46.1ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-09-16 11:52:50 -0500
+  [1m[35m (9.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/andresburgos/.rvm/gems/ruby-2.3.3/gems/rack-cors-1.0.2/lib/rack/cors.rb:97
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/andresburgos/.rvm/rubies/ruby-2.3.3/lib/ruby/gems/2.3.0/gems/railties-5.2.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/andresburgos/.rvm/rubies/ruby-2.3.3/lib/ruby/gems/2.3.0/gems/railties-5.2.1/lib/rails/templates/rails/welcome/index.html.erb (12.8ms)
+Completed 200 OK in 79ms (Views: 57.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/v1/contacts" for 127.0.0.1 at 2018-09-16 11:54:42 -0500
+Processing by V1::ContactsController#index as HTML
+  [1m[36mContact Load (1.1ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts"[0m
+  ↳ app/controllers/v1/contacts_controller.rb:5
+Completed 200 OK in 107ms (Views: 90.3ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-16 14:04:37 -0500
+  [1m[35m (10.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/andresburgos/.rvm/gems/ruby-2.3.3/gems/rack-cors-1.0.2/lib/rack/cors.rb:97
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/andresburgos/.rvm/rubies/ruby-2.3.3/lib/ruby/gems/2.3.0/gems/railties-5.2.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/andresburgos/.rvm/rubies/ruby-2.3.3/lib/ruby/gems/2.3.0/gems/railties-5.2.1/lib/rails/templates/rails/welcome/index.html.erb (37.0ms)
+Completed 200 OK in 92ms (Views: 69.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "//v1/contacts/1" for 127.0.0.1 at 2018-09-16 14:05:02 -0500
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for V1::ContactsController):
+  
+actionpack (5.2.1) lib/abstract_controller/base.rb:129:in `process'
+actionview (5.2.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/v1/contacts/" for 127.0.0.1 at 2018-09-16 14:05:13 -0500
+Processing by V1::ContactsController#index as HTML
+  [1m[36mContact Load (33.7ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts"[0m
+  ↳ app/controllers/v1/contacts_controller.rb:5
+Completed 200 OK in 133ms (Views: 71.6ms | ActiveRecord: 34.7ms)
+
+
+Started GET "/v1/contacts/1" for 127.0.0.1 at 2018-09-16 14:05:17 -0500
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for V1::ContactsController):
+  
+actionpack (5.2.1) lib/abstract_controller/base.rb:129:in `process'
+actionview (5.2.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+  [1m[35m (8.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/andresburgos/.rvm/gems/ruby-2.3.3/gems/rake-12.3.1/lib/rake/task.rb:271
+Migrating to CreateTransfers (20180916191434)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/andresburgos/.rvm/gems/ruby-2.3.3/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ /Users/andresburgos/.rvm/gems/ruby-2.3.3/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (9.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/andresburgos/.rvm/gems/ruby-2.3.3/gems/rake-12.3.1/lib/rake/task.rb:271
+Migrating to CreateTransfers (20180916191658)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/andresburgos/.rvm/gems/ruby-2.3.3/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (15.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20180916191658_create_transfers.rb:3
+  [1m[35m (18.5ms)[0m  [1m[35mCREATE TABLE "transfers" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "hash" varchar, "lender" varchar, "borrower" varchar, "value" integer, "timestamp" datetime, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_344b52b7fd"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  ↳ db/migrate/20180916191658_create_transfers.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_transfers_on_user_id" ON "transfers" ("user_id")[0m
+  ↳ db/migrate/20180916191658_create_transfers.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (1.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180916191658"]]
+  ↳ /Users/andresburgos/.rvm/gems/ruby-2.3.3/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/andresburgos/.rvm/gems/ruby-2.3.3/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[36mActiveRecord::InternalMetadata Load (34.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/andresburgos/.rvm/gems/ruby-2.3.3/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/andresburgos/.rvm/gems/ruby-2.3.3/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/andresburgos/.rvm/gems/ruby-2.3.3/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/andresburgos/.rvm/gems/ruby-2.3.3/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mTransfer Load (21.4ms)[0m  [1m[34mSELECT  "transfers".* FROM "transfers" WHERE "transfers"."user_id" = ? LIMIT ?[0m  [["user_id", 5], ["LIMIT", 11]]
+  [1m[36mUser Load (13.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (22.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/andresburgos/.rvm/gems/ruby-2.3.3/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[36mActiveRecord::InternalMetadata Load (1.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/andresburgos/.rvm/gems/ruby-2.3.3/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/andresburgos/.rvm/gems/ruby-2.3.3/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/andresburgos/.rvm/gems/ruby-2.3.3/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/andresburgos/.rvm/gems/ruby-2.3.3/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (8.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/andresburgos/.rvm/gems/ruby-2.3.3/gems/rake-12.3.1/lib/rake/task.rb:271
+Migrating to CreateTransfers (20180916195742)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/andresburgos/.rvm/gems/ruby-2.3.3/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20180916195742_create_transfers.rb:3
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "transfers" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "ha_field" varchar, "lender" varchar, "borrower" varchar, "value" integer, "timestamp" datetime, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_344b52b7fd"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  ↳ db/migrate/20180916195742_create_transfers.rb:3
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ /Users/andresburgos/.rvm/gems/ruby-2.3.3/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (19.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/andresburgos/.rvm/gems/ruby-2.3.3/gems/rake-12.3.1/lib/rake/task.rb:271
+Migrating to CreateTransfers (20180916195742)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/andresburgos/.rvm/gems/ruby-2.3.3/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20180916195742_create_transfers.rb:3
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "transfers" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "ha_field" varchar, "lender" varchar, "borrower" varchar, "value" integer, "timestamp" datetime, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_344b52b7fd"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  ↳ db/migrate/20180916195742_create_transfers.rb:3
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  ↳ /Users/andresburgos/.rvm/gems/ruby-2.3.3/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (42.3ms)[0m  [1m[35mDROP TABLE "transfers"[0m
+  [1m[36mUser Load (65.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (9.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/andresburgos/.rvm/gems/ruby-2.3.3/gems/rake-12.3.1/lib/rake/task.rb:271
+Migrating to CreateTransfers (20180916201326)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/andresburgos/.rvm/gems/ruby-2.3.3/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20180916201326_create_transfers.rb:3
+  [1m[35m (20.0ms)[0m  [1m[35mCREATE TABLE "transfers" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "hs" varchar, "lender" varchar, "borrower" varchar, "value" integer, "ts" datetime, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_344b52b7fd"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  ↳ db/migrate/20180916201326_create_transfers.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_transfers_on_user_id" ON "transfers" ("user_id")[0m
+  ↳ db/migrate/20180916201326_create_transfers.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180916201326"]]
+  ↳ /Users/andresburgos/.rvm/gems/ruby-2.3.3/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/andresburgos/.rvm/gems/ruby-2.3.3/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[36mActiveRecord::InternalMetadata Load (1.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/andresburgos/.rvm/gems/ruby-2.3.3/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/andresburgos/.rvm/gems/ruby-2.3.3/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/andresburgos/.rvm/gems/ruby-2.3.3/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/andresburgos/.rvm/gems/ruby-2.3.3/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[36mTransfer Load (3.8ms)[0m  [1m[34mSELECT  "transfers".* FROM "transfers" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mTransfer Create (62.5ms)[0m  [1m[32mINSERT INTO "transfers" ("hs", "lender", "borrower", "value", "ts", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["hs", "z]yvpjl%"], ["lender", "bogota"], ["borrower", "cali"], ["value", 40], ["ts", "2018-09-16 13:33:00"], ["user_id", 5], ["created_at", "2018-09-16 20:19:33.132169"], ["updated_at", "2018-09-16 20:19:33.132169"]]
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTransfer Load (0.5ms)[0m  [1m[34mSELECT  "transfers".* FROM "transfers" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/" for 127.0.0.1 at 2018-09-16 15:52:08 -0500
+  [1m[35m (19.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/andresburgos/.rvm/gems/ruby-2.3.3/gems/rack-cors-1.0.2/lib/rack/cors.rb:97
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/andresburgos/.rvm/rubies/ruby-2.3.3/lib/ruby/gems/2.3.0/gems/railties-5.2.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/andresburgos/.rvm/rubies/ruby-2.3.3/lib/ruby/gems/2.3.0/gems/railties-5.2.1/lib/rails/templates/rails/welcome/index.html.erb (51.1ms)
+Completed 200 OK in 236ms (Views: 170.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/v1/contacts" for 127.0.0.1 at 2018-09-16 15:52:18 -0500
+Processing by V1::ContactsController#index as HTML
+  [1m[36mContact Load (31.3ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts"[0m
+  ↳ app/controllers/v1/contacts_controller.rb:5
+Completed 200 OK in 117ms (Views: 80.7ms | ActiveRecord: 33.9ms)
+
+
+Started GET "/v1/transfers" for 127.0.0.1 at 2018-09-16 15:52:30 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/v1/transfers"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/v1/sessions" for 127.0.0.1 at 2018-09-16 15:53:15 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/v1/sessions"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started POST "/v1/sessions?email=liliana.cruz@carvajal.com&password=[FILTERED]" for 127.0.0.1 at 2018-09-16 15:53:27 -0500
+Processing by V1::SessionsController#create as */*
+  Parameters: {"email"=>"liliana.cruz@carvajal.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (63.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "liliana.cruz@carvajal.com"], ["LIMIT", 1]]
+  ↳ app/controllers/v1/sessions_controller.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/v1/sessions_controller.rb:5
+  [1m[36mUser Update (109.5ms)[0m  [1m[33mUPDATE "users" SET "last_sign_in_at" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["last_sign_in_at", "2018-09-16 15:53:28"], ["updated_at", "2018-09-16 20:53:28.235599"], ["id", 6]]
+  ↳ app/controllers/v1/sessions_controller.rb:5
+  [1m[35m (231.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/v1/sessions_controller.rb:5
+Completed 201 Created in 931ms (Views: 0.7ms | ActiveRecord: 404.8ms)
+
+
+Started POST "/v1/sessions?email=liliana.cruz@carvajal.com&password=[FILTERED]" for 127.0.0.1 at 2018-09-16 15:53:36 -0500
+Processing by V1::SessionsController#create as */*
+  Parameters: {"email"=>"liliana.cruz@carvajal.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "liliana.cruz@carvajal.com"], ["LIMIT", 1]]
+  ↳ app/controllers/v1/sessions_controller.rb:3
+Completed 422 Unprocessable Entity in 164ms (Views: 0.4ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/v1/sessions?email=liliana.cruz@carvajal.com&password=[FILTERED]" for 127.0.0.1 at 2018-09-16 15:53:41 -0500
+Processing by V1::SessionsController#create as */*
+  Parameters: {"email"=>"liliana.cruz@carvajal.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "liliana.cruz@carvajal.com"], ["LIMIT", 1]]
+  ↳ app/controllers/v1/sessions_controller.rb:3
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/v1/sessions_controller.rb:5
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "last_sign_in_at" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["last_sign_in_at", "2018-09-16 15:53:41"], ["updated_at", "2018-09-16 20:53:41.905535"], ["id", 6]]
+  ↳ app/controllers/v1/sessions_controller.rb:5
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/v1/sessions_controller.rb:5
+Completed 201 Created in 158ms (Views: 0.4ms | ActiveRecord: 3.0ms)
+
+
+Started POST "/v1/transfers/5" for 127.0.0.1 at 2018-09-16 15:55:20 -0500
+  
+ActionController::RoutingError (No route matches [POST] "/v1/transfers/5"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started POST "/v1/transfers/" for 127.0.0.1 at 2018-09-16 15:55:31 -0500
+  
+SyntaxError (/Users/andresburgos/Desktop/webServiceCorda.github.io/app/controllers/v1/transfers_controller.rb:21: syntax error, unexpected keyword_else
+		else 
+		    ^):
+  
+app/controllers/v1/transfers_controller.rb:21: syntax error, unexpected keyword_else
+Started POST "/v1/transfers/" for 127.0.0.1 at 2018-09-16 15:56:06 -0500
+Processing by V1::TransfersController#create as */*
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `transfers' for nil:NilClass):
+  
+app/controllers/v1/transfers_controller.rb:9:in `create'
+Started POST "/v1/transfers/" for 127.0.0.1 at 2018-09-16 15:57:22 -0500
+Processing by V1::TransfersController#create as */*
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `transfers' for nil:NilClass):
+  
+app/controllers/v1/transfers_controller.rb:9:in `create'
+Started POST "/v1/transfers/" for 127.0.0.1 at 2018-09-16 15:58:24 -0500
+Processing by V1::TransfersController#create as */*
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `transfers' for nil:NilClass):
+  
+app/controllers/v1/transfers_controller.rb:9:in `create'
+Started POST "/v1/transfers" for 127.0.0.1 at 2018-09-16 16:00:05 -0500
+Processing by V1::TransfersController#create as */*
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `transfers' for nil:NilClass):
+  
+app/controllers/v1/transfers_controller.rb:10:in `create'
+Started POST "/v1/transfers" for 127.0.0.1 at 2018-09-16 16:00:58 -0500
+Processing by V1::TransfersController#create as */*
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `transfers' for nil:NilClass):
+  
+app/controllers/v1/transfers_controller.rb:10:in `create'
+Started GET "/v1/transfers" for 127.0.0.1 at 2018-09-16 16:01:03 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/v1/transfers"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/v1/transfers" for 127.0.0.1 at 2018-09-16 16:01:55 -0500
+Processing by V1::TransfersController#index as */*
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `transfers' for nil:NilClass):
+  
+app/controllers/v1/transfers_controller.rb:3:in `index'
+Started GET "/v1/transfers" for 127.0.0.1 at 2018-09-16 16:03:18 -0500
+Processing by V1::TransfersController#index as */*
+Completed 500 Internal Server Error in 182ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `transfers' for #<V1::TransfersController:0x007faa1469a350>
+Did you mean?  transfer_params):
+  
+app/controllers/v1/transfers_controller.rb:3:in `index'
+Started GET "/v1/transfers" for 127.0.0.1 at 2018-09-16 16:03:40 -0500
+Processing by V1::TransfersController#index as */*
+  [1m[36mTransfer Load (0.3ms)[0m  [1m[34mSELECT "transfers".* FROM "transfers"[0m
+  ↳ app/controllers/v1/transfers_controller.rb:4
+Completed 200 OK in 69ms (Views: 28.4ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/v1/transfers?hs=1234hkjls&lender=cali&value=5&ts=09:33:00%20-0400&user_id=6&borrower=bogota" for 127.0.0.1 at 2018-09-16 16:23:26 -0500
+  [1m[35m (5.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/andresburgos/.rvm/gems/ruby-2.3.3/gems/rack-cors-1.0.2/lib/rack/cors.rb:97
+Processing by V1::TransfersController#create as */*
+  Parameters: {"hs"=>"1234hkjls", "lender"=>"cali", "value"=>"5", "ts"=>"09:33:00 -0400", "user_id"=>"6", "borrower"=>"bogota"}
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `transfers' for nil:NilClass):
+  
+app/controllers/v1/transfers_controller.rb:10:in `create'
+Started POST "/v1/transfers?hs=hkgdglfbjdka&lender=bogota&borrower=cali&value=10" for 127.0.0.1 at 2018-09-16 17:13:30 -0500
+  [1m[35m (9.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/andresburgos/.rvm/gems/ruby-2.3.3/gems/rack-cors-1.0.2/lib/rack/cors.rb:97
+Processing by V1::TransfersController#create as */*
+  Parameters: {"hs"=>"hkgdglfbjdka", "lender"=>"bogota", "borrower"=>"cali", "value"=>"10"}
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `transfers' for nil:NilClass):
+  
+app/controllers/v1/transfers_controller.rb:9:in `create'
+Started GET "/transfers/" for 127.0.0.1 at 2018-09-16 17:13:56 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/transfers"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+  [1m[36mTransfer Load (13.6ms)[0m  [1m[34mSELECT  "transfers".* FROM "transfers" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/" for 127.0.0.1 at 2018-09-16 17:36:17 -0500
+  [1m[35m (31.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/andresburgos/.rvm/gems/ruby-2.3.3/gems/rack-cors-1.0.2/lib/rack/cors.rb:97
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/andresburgos/.rvm/rubies/ruby-2.3.3/lib/ruby/gems/2.3.0/gems/railties-5.2.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/andresburgos/.rvm/rubies/ruby-2.3.3/lib/ruby/gems/2.3.0/gems/railties-5.2.1/lib/rails/templates/rails/welcome/index.html.erb (13.2ms)
+Completed 200 OK in 92ms (Views: 56.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/v1/transfers" for 127.0.0.1 at 2018-09-16 17:36:39 -0500
+Processing by V1::TransfersController#index as HTML
+  [1m[36mTransfer Load (13.4ms)[0m  [1m[34mSELECT "transfers".* FROM "transfers"[0m
+  ↳ app/controllers/v1/transfers_controller.rb:4
+Completed 200 OK in 74ms (Views: 25.6ms | ActiveRecord: 14.4ms)
+
+
