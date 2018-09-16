@@ -1,0 +1,1260 @@
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ /usr/local/bin/rake:22
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ /usr/local/bin/rake:22
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ /usr/local/bin/rake:22
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bin/rake:22
+Migrating to CreateContacts (20180914194034)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bin/rake:22
+Migrating to CreateContacts (20180914194034)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /usr/local/bin/rake:22
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20180914194034_create_contacts.rb:3
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "contacts" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar, "last_name" varchar, "email" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180914194034_create_contacts.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180914194034"]]
+  ↳ /usr/local/bin/rake:22
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /usr/local/bin/rake:22
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /usr/local/bin/rake:22
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /usr/local/bin/rake:22
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-09-14 19:42:29.865774"], ["updated_at", "2018-09-14 19:42:29.865774"]]
+  ↳ /usr/local/bin/rake:22
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /usr/local/bin/rake:22
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bin/rake:22
+Started GET "/" for 127.0.0.1 at 2018-09-14 14:47:28 -0500
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Library/Ruby/Gems/2.3.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Library/Ruby/Gems/2.3.0/gems/railties-5.2.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Library/Ruby/Gems/2.3.0/gems/railties-5.2.1/lib/rails/templates/rails/welcome/index.html.erb (11.9ms)
+Completed 200 OK in 73ms (Views: 36.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2018-09-14 14:47:28 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/v1/contacts" for 127.0.0.1 at 2018-09-14 14:47:55 -0500
+Processing by V1::ContactsController#index as HTML
+  [1m[36mContact Load (3.8ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts"[0m
+  ↳ app/controllers/v1/contacts_controller.rb:5
+Completed 200 OK in 19ms (Views: 1.2ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/v1/contacts" for 127.0.0.1 at 2018-09-14 14:55:17 -0500
+Processing by V1::ContactsController#index as HTML
+  [1m[36mContact Load (13.9ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts"[0m
+  ↳ app/controllers/v1/contacts_controller.rb:5
+Completed 200 OK in 17ms (Views: 1.1ms | ActiveRecord: 14.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-14 15:05:25 -0500
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Library/Ruby/Gems/2.3.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Library/Ruby/Gems/2.3.0/gems/railties-5.2.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Library/Ruby/Gems/2.3.0/gems/railties-5.2.1/lib/rails/templates/rails/welcome/index.html.erb (3.5ms)
+Completed 200 OK in 22ms (Views: 7.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-14 15:06:20 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Library/Ruby/Gems/2.3.0/gems/railties-5.2.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Library/Ruby/Gems/2.3.0/gems/railties-5.2.1/lib/rails/templates/rails/welcome/index.html.erb (3.3ms)
+Completed 200 OK in 8ms (Views: 5.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contacts" for 127.0.0.1 at 2018-09-14 15:06:33 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/contacts"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/v1/contacts" for 127.0.0.1 at 2018-09-14 15:07:28 -0500
+Processing by V1::ContactsController#index as HTML
+  [1m[36mContact Load (12.0ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts"[0m
+  ↳ app/controllers/v1/contacts_controller.rb:5
+Completed 200 OK in 16ms (Views: 1.6ms | ActiveRecord: 12.2ms)
+
+
+Started GET "/v1/contacts" for 127.0.0.1 at 2018-09-14 15:07:57 -0500
+Processing by V1::ContactsController#index as HTML
+  [1m[36mContact Load (0.1ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts"[0m
+  ↳ app/controllers/v1/contacts_controller.rb:5
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.1ms)
+
+
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bin/rake:22
+Migrating to DeviseCreateUsers (20180914201547)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /usr/local/bin/rake:22
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20180914201547_devise_create_users.rb:5
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180914201547_devise_create_users.rb:5
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  ↳ db/migrate/20180914201547_devise_create_users.rb:39
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  ↳ db/migrate/20180914201547_devise_create_users.rb:40
+  [1m[36mActiveRecord::SchemaMigration Create (4.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180914201547"]]
+  ↳ /usr/local/bin/rake:22
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /usr/local/bin/rake:22
+Migrating to AddNameToUsers (20180914201731)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /usr/local/bin/rake:22
+  [1m[35m (15.0ms)[0m  [1m[35mALTER TABLE "users" ADD "name" varchar[0m
+  ↳ db/migrate/20180914201731_add_name_to_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180914201731"]]
+  ↳ /usr/local/bin/rake:22
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /usr/local/bin/rake:22
+Migrating to AddBalanceToUsers (20180914201755)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /usr/local/bin/rake:22
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "balance" float[0m
+  ↳ db/migrate/20180914201755_add_balance_to_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180914201755"]]
+  ↳ /usr/local/bin/rake:22
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /usr/local/bin/rake:22
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /usr/local/bin/rake:22
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /usr/local/bin/rake:22
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /usr/local/bin/rake:22
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bin/rake:22
+Started GET "/v1/sessions" for 127.0.0.1 at 2018-09-14 15:40:07 -0500
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Library/Ruby/Gems/2.3.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (No route matches [GET] "/v1/sessions"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+  [1m[36mContact Load (6.5ms)[0m  [1m[34mSELECT  "contacts".* FROM "contacts" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mContact Create (30.3ms)[0m  [1m[32mINSERT INTO "contacts" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Guillermo"], ["last_name", "Jaramillo"], ["email", "guillermo@carvajal.com"], ["created_at", "2018-09-14 20:43:28.738137"], ["updated_at", "2018-09-14 20:43:28.738137"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mContact Load (0.4ms)[0m  [1m[34mSELECT  "contacts".* FROM "contacts" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/v1/contacts" for 127.0.0.1 at 2018-09-14 15:43:59 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Library/Ruby/Gems/2.3.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by V1::ContactsController#index as HTML
+  [1m[36mContact Load (0.1ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts"[0m
+  ↳ app/controllers/v1/contacts_controller.rb:5
+Completed 200 OK in 10ms (Views: 7.6ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/v1/sessions" for 127.0.0.1 at 2018-09-14 15:47:13 -0500
+  
+ActionController::RoutingError (undefined local variable or method `v1' for main:Object):
+  
+app/controllers/v1/sessions_controller.rb:1:in `<main>'
+Started GET "/v1/sessions" for 127.0.0.1 at 2018-09-14 15:49:32 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/v1/sessions"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/v1/contacts" for 127.0.0.1 at 2018-09-14 15:50:42 -0500
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Library/Ruby/Gems/2.3.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by V1::ContactsController#index as HTML
+  [1m[36mContact Load (0.1ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts"[0m
+  ↳ app/controllers/v1/contacts_controller.rb:5
+Completed 200 OK in 16ms (Views: 14.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/v1/contacts" for 127.0.0.1 at 2018-09-14 15:50:46 -0500
+Processing by V1::ContactsController#index as */*
+  [1m[36mContact Load (0.1ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts"[0m
+  ↳ app/controllers/v1/contacts_controller.rb:5
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.1ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "guillermo.jaramillo@carvajal.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "balance") VALUES (?, ?, ?, ?, ?, ?)[0m  [["email", "guillermo.jaramillo@carvajal.com"], ["encrypted_password", "$2a$11$9cQUenDg9Y0zvYDDXXveOupDcHWA9EYNg9sO/HTwkLJDeDAgI5wzu"], ["created_at", "2018-09-14 20:55:30.491138"], ["updated_at", "2018-09-14 20:55:30.491138"], ["name", "Guillermo Jaramillo"], ["balance", 100.0]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "liliana.cruz@carvajal.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "balance") VALUES (?, ?, ?, ?, ?, ?)[0m  [["email", "liliana.cruz@carvajal.com"], ["encrypted_password", "$2a$11$lR7sSogwuVoKdG8lkhSE9.bMsvBZAV1fHBg3S5.x6EkpPtvQAMCOK"], ["created_at", "2018-09-14 20:56:17.459179"], ["updated_at", "2018-09-14 20:56:17.459179"], ["name", "Liliana Cruz"], ["balance", 100.0]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "graciela.soto@carvajal.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "balance") VALUES (?, ?, ?, ?, ?, ?)[0m  [["email", "graciela.soto@carvajal.com"], ["encrypted_password", "$2a$11$nkLqNM6nsjkJAH2XiKB5P.U/gXVB9bwet62hwKlOIjq.O8ldpDKxO"], ["created_at", "2018-09-14 20:56:57.038957"], ["updated_at", "2018-09-14 20:56:57.038957"], ["name", "Graciela Soto"], ["balance", 100.0]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "equipo.blockchain@carvajal.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "balance") VALUES (?, ?, ?, ?, ?, ?)[0m  [["email", "equipo.blockchain@carvajal.com"], ["encrypted_password", "$2a$11$pdyYmY3LIShzsn0.h0i9YuQtg7YHXrsRf3h7d/bTJhuC.zGG0QoFm"], ["created_at", "2018-09-14 20:57:39.900112"], ["updated_at", "2018-09-14 20:57:39.900112"], ["name", "Equipo Blockchain"], ["balance", 100.0]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/v1/sessions" for 127.0.0.1 at 2018-09-14 16:04:11 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Library/Ruby/Gems/2.3.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (No route matches [GET] "/v1/sessions"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/v1/sessions" for 127.0.0.1 at 2018-09-14 16:04:19 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/v1/sessions"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+  [1m[36mUser Load (4.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+Started POST "/v1/sessions" for 127.0.0.1 at 2018-09-14 16:05:41 -0500
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Library/Ruby/Gems/2.3.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (undefined local variable or method `v1' for main:Object):
+  
+app/controllers/v1/sessions_controller.rb:1:in `<main>'
+Started POST "/v1/sessions" for 127.0.0.1 at 2018-09-14 16:05:49 -0500
+  
+ActionController::RoutingError (undefined local variable or method `v1' for main:Object):
+  
+app/controllers/v1/sessions_controller.rb:1:in `<main>'
+Started GET "/v1/sessions" for 127.0.0.1 at 2018-09-14 16:07:46 -0500
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Library/Ruby/Gems/2.3.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (No route matches [GET] "/v1/sessions"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/v1/sessions" for 127.0.0.1 at 2018-09-14 16:08:02 -0500
+  
+SyntaxError (/Users/estudiante/Documents/lockenApi/config/routes.rb:8: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+config/routes.rb:8: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/v1/sessions" for 127.0.0.1 at 2018-09-14 16:08:20 -0500
+  
+ActionController::RoutingError (undefined local variable or method `v1' for main:Object):
+  
+app/controllers/v1/sessions_controller.rb:1:in `<main>'
+Started GET "/v1/sessions" for 127.0.0.1 at 2018-09-14 16:08:46 -0500
+  
+ActionController::RoutingError (undefined local variable or method `v1' for main:Object):
+  
+app/controllers/v1/sessions_controller.rb:1:in `<main>'
+Started GET "/v1/contacts" for 127.0.0.1 at 2018-09-14 16:08:55 -0500
+Processing by V1::ContactsController#index as HTML
+  [1m[36mContact Load (23.8ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts"[0m
+  ↳ app/controllers/v1/contacts_controller.rb:5
+Completed 200 OK in 51ms (Views: 25.2ms | ActiveRecord: 24.3ms)
+
+
+  [1m[36mUser Load (4.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Destroy (21.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 1]]
+  [1m[36mUser Destroy (1.8ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 2]]
+  [1m[36mUser Destroy (1.9ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 3]]
+  [1m[36mUser Destroy (2.0ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 4]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "guillermo.jaramillo@carvajal.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (26.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "balance") VALUES (?, ?, ?, ?, ?, ?)[0m  [["email", "guillermo.jaramillo@carvajal.com"], ["encrypted_password", "$2a$11$B4rc8B4NYM7tA436wtLoD.3hrbijH1A.YIWeD0f8ZFiNZJ5iD1fGS"], ["created_at", "2018-09-14 21:27:55.510315"], ["updated_at", "2018-09-14 21:27:55.510315"], ["name", "Guillermo Jaramillo"], ["balance", 100.0]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (24.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "liliana.cruz@carvajal.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (3.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "balance") VALUES (?, ?, ?, ?, ?, ?)[0m  [["email", "liliana.cruz@carvajal.com"], ["encrypted_password", "$2a$11$OpaGjfcitoZRTyr1F3gsm.AmqAFWE2uTwIWCs1PKYM.j.QSBCoP96"], ["created_at", "2018-09-14 21:29:41.371572"], ["updated_at", "2018-09-14 21:29:41.371572"], ["name", "Liliana Cruz"], ["balance", 100.0]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+Started POST "/v1/sessions" for 127.0.0.1 at 2018-09-14 16:33:10 -0500
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Library/Ruby/Gems/2.3.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (undefined local variable or method `v1' for main:Object):
+  
+app/controllers/v1/sessions_controller.rb:1:in `<main>'
+Started GET "/v1/contacts" for 127.0.0.1 at 2018-09-14 16:34:16 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Library/Ruby/Gems/2.3.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by V1::ContactsController#index as */*
+  [1m[36mContact Load (11.5ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts"[0m
+  ↳ app/controllers/v1/contacts_controller.rb:5
+Completed 200 OK in 39ms (Views: 24.7ms | ActiveRecord: 12.3ms)
+
+
+Started POST "/v1/sessions" for 127.0.0.1 at 2018-09-14 16:34:33 -0500
+Processing by V1::SessionsController#create as */*
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" IS NULL ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/v1/sessions_controller.rb:3
+Completed 500 Internal Server Error in 39ms (ActiveRecord: 2.3ms)
+
+
+  
+NoMethodError (undefined method `valid_password?' for nil:NilClass):
+  
+app/controllers/v1/sessions_controller.rb:5:in `create'
+Started POST "/v1/sessions" for 127.0.0.1 at 2018-09-14 16:35:23 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Library/Ruby/Gems/2.3.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by V1::SessionsController#create as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" IS NULL ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/v1/sessions_controller.rb:3
+Completed 401 Unauthorized in 6ms (Views: 0.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/v1/sessions" for 127.0.0.1 at 2018-09-14 16:35:40 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/v1/sessions"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/V1/sessions" for 127.0.0.1 at 2018-09-14 16:35:48 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/V1/sessions"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/v1/sessions" for 127.0.0.1 at 2018-09-14 16:36:04 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/v1/sessions"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/v1/contacts" for 127.0.0.1 at 2018-09-14 16:36:17 -0500
+Processing by V1::ContactsController#index as HTML
+  [1m[36mContact Load (0.3ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts"[0m
+  ↳ app/controllers/v1/contacts_controller.rb:5
+Completed 200 OK in 10ms (Views: 8.2ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/v1/sessions" for 127.0.0.1 at 2018-09-14 16:36:31 -0500
+Processing by V1::SessionsController#create as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" IS NULL ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/v1/sessions_controller.rb:3
+Completed 401 Unauthorized in 2ms (Views: 0.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/v1/sessions" for 127.0.0.1 at 2018-09-14 16:36:37 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/v1/sessions"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started POST "/v1/sessions" for 127.0.0.1 at 2018-09-14 16:41:46 -0500
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Library/Ruby/Gems/2.3.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by V1::SessionsController#create as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" IS NULL ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/v1/sessions_controller.rb:3
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 1.0ms)
+
+
+  
+NoMethodError (undefined method `valid_password?' for nil:NilClass):
+  
+app/controllers/v1/sessions_controller.rb:5:in `create'
+Started POST "/v1/sessions" for 127.0.0.1 at 2018-09-14 16:45:01 -0500
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Library/Ruby/Gems/2.3.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by V1::SessionsController#create as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" IS NULL ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/v1/sessions_controller.rb:3
+Completed 401 Unauthorized in 6ms (ActiveRecord: 1.3ms)
+
+
+Started POST "/v1/sessions" for 127.0.0.1 at 2018-09-14 16:45:09 -0500
+Processing by V1::SessionsController#create as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" IS NULL ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/v1/sessions_controller.rb:3
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.2ms)
+
+
+Started POST "/v1/sessions" for 127.0.0.1 at 2018-09-14 16:48:15 -0500
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Library/Ruby/Gems/2.3.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by V1::SessionsController#create as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" IS NULL ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/v1/sessions_controller.rb:3
+Completed 401 Unauthorized in 6ms (ActiveRecord: 1.0ms)
+
+
+  [1m[36mUser Load (9.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+Started POST "/v1/sessions" for 127.0.0.1 at 2018-09-14 16:53:56 -0500
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Library/Ruby/Gems/2.3.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by V1::SessionsController#create as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" IS NULL ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/v1/sessions_controller.rb:3
+Completed 401 Unauthorized in 5ms (ActiveRecord: 0.9ms)
+
+
+Started POST "/v1/sessions" for 127.0.0.1 at 2018-09-14 16:54:50 -0500
+Processing by V1::SessionsController#create as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" IS NULL ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/v1/sessions_controller.rb:3
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.2ms)
+
+
+  [1m[36mUser Load (10.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+Started POST "/v1/sessions" for 127.0.0.1 at 2018-09-14 16:57:21 -0500
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Library/Ruby/Gems/2.3.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by V1::SessionsController#create as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" IS NULL ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/v1/sessions_controller.rb:3
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.9ms)
+
+
+  
+NoMethodError (undefined method `email' for #<Class:0x007fe92458bbe0>):
+  
+app/controllers/v1/sessions_controller.rb:5:in `create'
+Started POST "/v1/sessions" for 127.0.0.1 at 2018-09-14 16:57:54 -0500
+Processing by V1::SessionsController#create as */*
+  [1m[36mUser Load (17.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" IS NULL ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/v1/sessions_controller.rb:3
+Completed 500 Internal Server Error in 83ms (ActiveRecord: 17.7ms)
+
+
+  
+NoMethodError (undefined method `user' for #<V1::SessionsController:0x007fe920428018>):
+  
+app/controllers/v1/sessions_controller.rb:5:in `create'
+  [1m[36mUser Load (9.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+Started POST "/v1/sessions" for 127.0.0.1 at 2018-09-14 17:03:36 -0500
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Library/Ruby/Gems/2.3.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by V1::SessionsController#create as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" IS NULL ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/v1/sessions_controller.rb:3
+Completed 401 Unauthorized in 5ms (ActiveRecord: 1.0ms)
+
+
+Started POST "/v1/sessions" for 127.0.0.1 at 2018-09-14 17:07:03 -0500
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Library/Ruby/Gems/2.3.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by V1::SessionsController#create as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" IS NULL ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/v1/sessions_controller.rb:3
+Completed 500 Internal Server Error in 60ms (ActiveRecord: 1.0ms)
+
+
+  
+NoMethodError (undefined method `user?' for #<V1::SessionsController:0x007f8d3f9e33c8>):
+  
+app/controllers/v1/sessions_controller.rb:5:in `create'
+Started POST "/v1/sessions" for 127.0.0.1 at 2018-09-14 17:07:24 -0500
+Processing by V1::SessionsController#create as */*
+  [1m[36mUser Load (17.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" IS NULL ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/v1/sessions_controller.rb:3
+Completed 401 Unauthorized in 21ms (ActiveRecord: 17.7ms)
+
+
+Started POST "/v1/sessions" for 127.0.0.1 at 2018-09-14 17:10:14 -0500
+Processing by V1::SessionsController#create as */*
+  [1m[36mUser Load (18.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" IS NULL ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/v1/sessions_controller.rb:4
+Completed 401 Unauthorized in 21ms (ActiveRecord: 19.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-14 17:11:20 -0500
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Library/Ruby/Gems/2.3.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Library/Ruby/Gems/2.3.0/gems/railties-5.2.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Library/Ruby/Gems/2.3.0/gems/railties-5.2.1/lib/rails/templates/rails/welcome/index.html.erb (4.4ms)
+Completed 200 OK in 39ms (Views: 8.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/v1/contacts" for 127.0.0.1 at 2018-09-14 17:11:28 -0500
+Processing by V1::ContactsController#index as HTML
+  [1m[36mContact Load (24.1ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts"[0m
+  ↳ app/controllers/v1/contacts_controller.rb:5
+Completed 500 Internal Server Error in 110ms (Views: 36.1ms | ActiveRecord: 24.5ms)
+
+
+  
+NoMethodError (undefined method `respond_to' for #<V1::ContactsController:0x007fbc6c2972c0>
+Did you mean?  respond_to?
+               respond_with
+               respond_to_missing?
+               response_body
+               response_code
+               responder
+               response_body=
+               responder?
+               responder=):
+  
+app/controllers/v1/contacts_controller.rb:6:in `index'
+Started GET "/v1/contacts" for 127.0.0.1 at 2018-09-14 17:11:37 -0500
+Processing by V1::ContactsController#index as HTML
+  [1m[36mContact Load (27.0ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts"[0m
+  ↳ app/controllers/v1/contacts_controller.rb:5
+Completed 200 OK in 34ms (Views: 5.7ms | ActiveRecord: 27.5ms)
+
+
+  [1m[36mUser Load (10.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+Started POST "/v1/sessions" for 127.0.0.1 at 2018-09-14 17:21:49 -0500
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Library/Ruby/Gems/2.3.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by V1::SessionsController#create as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" IS NULL ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/v1/sessions_controller.rb:3
+Completed 401 Unauthorized in 5ms (ActiveRecord: 0.9ms)
+
+
+Started POST "/v1/sessions" for 127.0.0.1 at 2018-09-14 17:24:36 -0500
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Library/Ruby/Gems/2.3.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by V1::SessionsController#create as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" IS NULL ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/v1/sessions_controller.rb:3
+Completed 401 Unauthorized in 7ms (ActiveRecord: 1.1ms)
+
+
+Started POST "/v1/sessions?email=liliana.cruz@carvajal.com&password=[FILTERED]" for 127.0.0.1 at 2018-09-14 17:25:31 -0500
+Processing by V1::SessionsController#create as */*
+  Parameters: {"email"=>"liliana.cruz@carvajal.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (18.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "liliana.cruz@carvajal.com"], ["LIMIT", 1]]
+  ↳ app/controllers/v1/sessions_controller.rb:3
+Completed 500 Internal Server Error in 110ms (ActiveRecord: 18.8ms)
+
+
+  
+NoMethodError (undefined method `valid_password?' for #<V1::SessionsController:0x007f8b0d66f360>):
+  
+app/controllers/v1/sessions_controller.rb:5:in `create'
+Started POST "/v1/sessions?email=liliana.cruz@carvajal.com&password=[FILTERED]" for 127.0.0.1 at 2018-09-14 17:25:39 -0500
+Processing by V1::SessionsController#create as */*
+  Parameters: {"email"=>"liliana.cruz@carvajal.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "liliana.cruz@carvajal.com"], ["LIMIT", 1]]
+  ↳ app/controllers/v1/sessions_controller.rb:3
+Completed 500 Internal Server Error in 43ms (ActiveRecord: 0.2ms)
+
+
+  
+NoMethodError (undefined method `valid_password?' for #<V1::SessionsController:0x007f8b0db03ea8>):
+  
+app/controllers/v1/sessions_controller.rb:5:in `create'
+Started POST "/v1/sessions?email=guillermo.jaramillo@carvajal.com&password=[FILTERED]" for 127.0.0.1 at 2018-09-14 17:32:37 -0500
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Library/Ruby/Gems/2.3.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by V1::SessionsController#create as */*
+  Parameters: {"email"=>"guillermo.jaramillo@carvajal.com", "password"=>"[FILTERED]"}
+Completed 500 Internal Server Error in 117ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `user' for #<V1::SessionsController:0x007f9b22bcf858>):
+  
+app/controllers/v1/sessions_controller.rb:6:in `create'
+Started GET "/v1/contacts" for 127.0.0.1 at 2018-09-14 17:32:46 -0500
+Processing by V1::ContactsController#index as */*
+  [1m[36mContact Load (6.4ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts"[0m
+  ↳ app/controllers/v1/contacts_controller.rb:5
+Completed 200 OK in 39ms (Views: 24.6ms | ActiveRecord: 7.0ms)
+
+
+Started POST "/v1/sessions?email=guillermo.jaramillo@carvajal.com&password=[FILTERED]" for 127.0.0.1 at 2018-09-14 17:33:29 -0500
+Processing by V1::SessionsController#create as */*
+  Parameters: {"email"=>"guillermo.jaramillo@carvajal.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (35.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "guillermo.jaramillo@carvajal.com"], ["LIMIT", 1]]
+  ↳ app/controllers/v1/sessions_controller.rb:3
+Completed 201 Created in 63ms (Views: 0.2ms | ActiveRecord: 36.2ms)
+
+
+Started POST "/v1/sessions?email=guillermo.jaramillo@carvajal.com&password=[FILTERED]" for 127.0.0.1 at 2018-09-14 17:34:09 -0500
+Processing by V1::SessionsController#create as */*
+  Parameters: {"email"=>"guillermo.jaramillo@carvajal.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (39.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "guillermo.jaramillo@carvajal.com"], ["LIMIT", 1]]
+  ↳ app/controllers/v1/sessions_controller.rb:3
+Completed 201 Created in 54ms (Views: 0.2ms | ActiveRecord: 40.4ms)
+
+
+Started POST "/v1/sessions?email=guillermo.jaramillo@carvajal.com&password=[FILTERED]" for 127.0.0.1 at 2018-09-14 17:34:17 -0500
+Processing by V1::SessionsController#create as */*
+  Parameters: {"email"=>"guillermo.jaramillo@carvajal.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "guillermo.jaramillo@carvajal.com"], ["LIMIT", 1]]
+  ↳ app/controllers/v1/sessions_controller.rb:3
+Completed 201 Created in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/v1/sessions?email=guillermo.jaramillo@carvajal.com&password=[FILTERED]" for 127.0.0.1 at 2018-09-14 17:34:23 -0500
+Processing by V1::SessionsController#create as */*
+  Parameters: {"email"=>"guillermo.jaramillo@carvajal.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "guillermo.jaramillo@carvajal.com"], ["LIMIT", 1]]
+  ↳ app/controllers/v1/sessions_controller.rb:3
+Completed 201 Created in 21ms (Views: 0.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/v1/contacts" for 172.19.19.38 at 2018-09-14 17:36:27 -0500
+Processing by V1::ContactsController#index as */*
+  [1m[36mContact Load (6.2ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts"[0m
+  ↳ app/controllers/v1/contacts_controller.rb:5
+Completed 200 OK in 20ms (Views: 5.5ms | ActiveRecord: 6.8ms)
+
+
+Started POST "/v1/sessions?email=guillermo.jaramillo@carvajal.com&password=[FILTERED]" for 127.0.0.1 at 2018-09-14 17:37:05 -0500
+Processing by V1::SessionsController#create as */*
+  Parameters: {"email"=>"guillermo.jaramillo@carvajal.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "guillermo.jaramillo@carvajal.com"], ["LIMIT", 1]]
+  ↳ app/controllers/v1/sessions_controller.rb:3
+Completed 201 Created in 14ms (Views: 0.2ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/v1/sessions?email=guillermo.jaramillo@carvajal.com&password=[FILTERED]" for 127.0.0.1 at 2018-09-14 17:37:41 -0500
+Processing by V1::SessionsController#create as */*
+  Parameters: {"email"=>"guillermo.jaramillo@carvajal.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "guillermo.jaramillo@carvajal.com"], ["LIMIT", 1]]
+  ↳ app/controllers/v1/sessions_controller.rb:3
+Completed 201 Created in 14ms (Views: 0.2ms | ActiveRecord: 1.0ms)
+
+
+  [1m[36mUser Load (8.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bin/rake:22
+Migrating to AddAuthenticationTokenToUsers (20180914231229)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /usr/local/bin/rake:22
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "users" ADD "authentication_token" varchar(30)[0m
+  ↳ db/migrate/20180914231229_add_authentication_token_to_users.rb:3
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20180914231229_add_authentication_token_to_users.rb:4
+  [1m[35m (21.5ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_authentication_token" ON "users" ("authentication_token")[0m
+  ↳ db/migrate/20180914231229_add_authentication_token_to_users.rb:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180914231229"]]
+  ↳ /usr/local/bin/rake:22
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /usr/local/bin/rake:22
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /usr/local/bin/rake:22
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /usr/local/bin/rake:22
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /usr/local/bin/rake:22
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bin/rake:22
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (13.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" WHERE "users"."authentication_token" = ?[0m  [["authentication_token", "-K6pizPw6Kws2qBod85s"]]
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "authentication_token" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2018-09-14 23:14:33.461539"], ["authentication_token", "-K6pizPw6Kws2qBod85s"], ["id", 6]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 1]]
+Started POST "/v1/sessions?email=guillermo.jaramillo@carvajal.com&password=[FILTERED]" for 127.0.0.1 at 2018-09-14 18:16:31 -0500
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Library/Ruby/Gems/2.3.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by V1::SessionsController#create as */*
+  Parameters: {"email"=>"guillermo.jaramillo@carvajal.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "guillermo.jaramillo@carvajal.com"], ["LIMIT", 1]]
+  ↳ app/controllers/v1/sessions_controller.rb:3
+Completed 201 Created in 35ms (Views: 0.4ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/v1/sessions?email=guillermo.jaramillo@carvajal.com&password=[FILTERED]" for 127.0.0.1 at 2018-09-14 18:17:20 -0500
+Processing by V1::SessionsController#create as */*
+  Parameters: {"email"=>"guillermo.jaramillo@carvajal.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (16.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "guillermo.jaramillo@carvajal.com"], ["LIMIT", 1]]
+  ↳ app/controllers/v1/sessions_controller.rb:3
+Completed 201 Created in 36ms (Views: 0.3ms | ActiveRecord: 17.4ms)
+
+
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/andresburgos/.rvm/gems/ruby-2.3.3/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[36mActiveRecord::InternalMetadata Load (1.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/andresburgos/.rvm/gems/ruby-2.3.3/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/andresburgos/.rvm/gems/ruby-2.3.3/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/andresburgos/.rvm/gems/ruby-2.3.3/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/andresburgos/.rvm/gems/ruby-2.3.3/gems/rake-12.3.1/lib/rake/task.rb:271
+Started GET "/" for 127.0.0.1 at 2018-09-15 14:51:00 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/andresburgos/.rvm/gems/ruby-2.3.3/gems/rack-cors-1.0.2/lib/rack/cors.rb:97
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/andresburgos/.rvm/rubies/ruby-2.3.3/lib/ruby/gems/2.3.0/gems/railties-5.2.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/andresburgos/.rvm/rubies/ruby-2.3.3/lib/ruby/gems/2.3.0/gems/railties-5.2.1/lib/rails/templates/rails/welcome/index.html.erb (7.8ms)
+Completed 200 OK in 117ms (Views: 42.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2018-09-15 14:51:01 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/v1/contacts" for 127.0.0.1 at 2018-09-15 14:52:54 -0500
+Processing by V1::ContactsController#index as HTML
+  [1m[36mContact Load (25.8ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts"[0m
+  ↳ app/controllers/v1/contacts_controller.rb:5
+Completed 200 OK in 100ms (Views: 48.1ms | ActiveRecord: 26.9ms)
+
+
+Started POST "/v1/sessions" for 127.0.0.1 at 2018-09-15 14:54:46 -0500
+Processing by V1::SessionsController#create as */*
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" IS NULL ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/v1/sessions_controller.rb:3
+Completed 201 Created in 40ms (Views: 0.2ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/v1/contacts" for 127.0.0.1 at 2018-09-15 14:55:13 -0500
+Processing by V1::ContactsController#index as */*
+  [1m[36mContact Load (0.3ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts"[0m
+  ↳ app/controllers/v1/contacts_controller.rb:5
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/v1/sessions?email=liliana.cruz@carvajal.com&password=[FILTERED]" for 127.0.0.1 at 2018-09-15 14:56:03 -0500
+Processing by V1::SessionsController#create as */*
+  Parameters: {"email"=>"liliana.cruz@carvajal.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "liliana.cruz@carvajal.com"], ["LIMIT", 1]]
+  ↳ app/controllers/v1/sessions_controller.rb:3
+Completed 201 Created in 41ms (Views: 0.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-15 17:17:19 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/andresburgos/.rvm/rubies/ruby-2.3.3/lib/ruby/gems/2.3.0/gems/railties-5.2.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/andresburgos/.rvm/rubies/ruby-2.3.3/lib/ruby/gems/2.3.0/gems/railties-5.2.1/lib/rails/templates/rails/welcome/index.html.erb (510.9ms)
+Completed 200 OK in 772ms (Views: 642.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/v1/sessions?email=liliana.cruz@carvajal.com&password=[FILTERED]" for 127.0.0.1 at 2018-09-15 17:23:33 -0500
+Processing by V1::SessionsController#create as */*
+  Parameters: {"email"=>"liliana.cruz@carvajal.com", "password"=>"[FILTERED]"}
+Completed 500 Internal Server Error in 377ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `sign_in_params' for #<V1::SessionsController:0x007f8087b47a30>
+Did you mean?  signed_in_root_path):
+  
+app/controllers/v1/sessions_controller.rb:3:in `create'
+Started POST "/v1/sessions?email=liliana.cruz@carvajal.com&password=[FILTERED]" for 127.0.0.1 at 2018-09-15 17:27:24 -0500
+Processing by V1::SessionsController#create as */*
+  Parameters: {"email"=>"liliana.cruz@carvajal.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (34.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "liliana.cruz@carvajal.com"], ["LIMIT", 1]]
+  ↳ app/controllers/v1/sessions_controller.rb:3
+Completed 201 Created in 122ms (Views: 0.4ms | ActiveRecord: 64.7ms)
+
+
+Started GET "/v1/contacts" for 127.0.0.1 at 2018-09-15 18:27:45 -0500
+  [1m[35m (15.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/andresburgos/.rvm/gems/ruby-2.3.3/gems/rack-cors-1.0.2/lib/rack/cors.rb:97
+Processing by V1::ContactsController#index as */*
+  [1m[36mContact Load (0.5ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts"[0m
+  ↳ app/controllers/v1/contacts_controller.rb:5
+Completed 200 OK in 117ms (Views: 113.1ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/v1/sessions?email=liliana.cruz@carvajal.com&password=[FILTERED]" for 127.0.0.1 at 2018-09-15 18:28:00 -0500
+Processing by V1::SessionsController#create as */*
+  Parameters: {"email"=>"liliana.cruz@carvajal.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (14.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "liliana.cruz@carvajal.com"], ["LIMIT", 1]]
+  ↳ app/controllers/v1/sessions_controller.rb:3
+Completed 201 Created in 72ms (Views: 0.6ms | ActiveRecord: 15.5ms)
+
+
+Started POST "/v1/sessions?email=liliana.cruz@carvajal.com&password=[FILTERED]" for 127.0.0.1 at 2018-09-15 18:28:07 -0500
+Processing by V1::SessionsController#create as */*
+  Parameters: {"email"=>"liliana.cruz@carvajal.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "liliana.cruz@carvajal.com"], ["LIMIT", 1]]
+  ↳ app/controllers/v1/sessions_controller.rb:3
+Completed 201 Created in 6ms (Views: 0.4ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/v1/sessions?email=liliana.cruz@carvajal.com&password=[FILTERED]" for 127.0.0.1 at 2018-09-15 18:44:49 -0500
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/andresburgos/.rvm/gems/ruby-2.3.3/gems/rack-cors-1.0.2/lib/rack/cors.rb:97
+Processing by V1::SessionsController#create as */*
+  Parameters: {"email"=>"liliana.cruz@carvajal.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (25.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "liliana.cruz@carvajal.com"], ["LIMIT", 1]]
+  ↳ app/controllers/v1/sessions_controller.rb:3
+Completed 201 Created in 83ms (Views: 14.7ms | ActiveRecord: 26.5ms)
+
+
+Started POST "/v1/sessions?email=liliana.cruz@carvajal.com&password=[FILTERED]" for 127.0.0.1 at 2018-09-15 18:45:02 -0500
+Processing by V1::SessionsController#create as */*
+  Parameters: {"email"=>"liliana.cruz@carvajal.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "liliana.cruz@carvajal.com"], ["LIMIT", 1]]
+  ↳ app/controllers/v1/sessions_controller.rb:3
+Completed 201 Created in 6ms (Views: 0.3ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/v1/sessions?email=liliana.cruz@carvajal.com&password=[FILTERED]" for 127.0.0.1 at 2018-09-15 18:46:44 -0500
+Processing by V1::SessionsController#create as */*
+  Parameters: {"email"=>"liliana.cruz@carvajal.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (13.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "liliana.cruz@carvajal.com"], ["LIMIT", 1]]
+  ↳ app/controllers/v1/sessions_controller.rb:3
+Completed 500 Internal Server Error in 233ms (ActiveRecord: 14.7ms)
+
+
+  
+NameError (undefined local variable or method `sign_in_params' for #<V1::SessionsController:0x007fafb4e7a458>
+Did you mean?  signed_in_root_path):
+  
+app/controllers/v1/sessions_controller.rb:5:in `create'
+Started POST "/v1/sessions?email=liliana.cruz@carvajal.com&password=[FILTERED]" for 127.0.0.1 at 2018-09-15 18:47:10 -0500
+Processing by V1::SessionsController#create as */*
+  Parameters: {"email"=>"liliana.cruz@carvajal.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (24.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "liliana.cruz@carvajal.com"], ["LIMIT", 1]]
+  ↳ app/controllers/v1/sessions_controller.rb:3
+Completed 401 Unauthorized in 420ms (ActiveRecord: 25.6ms)
+
+
+Started POST "/v1/sessions?email=liliana.cruz@carvajal.com&password=[FILTERED]" for 127.0.0.1 at 2018-09-15 18:47:31 -0500
+Processing by V1::SessionsController#create as */*
+  Parameters: {"email"=>"liliana.cruz@carvajal.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "liliana.cruz@carvajal.com"], ["LIMIT", 1]]
+  ↳ app/controllers/v1/sessions_controller.rb:3
+Completed 201 Created in 151ms (Views: 0.4ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/v1/sessions?email=liliana.cruz@carvajal.com&password=[FILTERED]" for 127.0.0.1 at 2018-09-15 18:49:48 -0500
+Processing by V1::SessionsController#create as */*
+  Parameters: {"email"=>"liliana.cruz@carvajal.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (16.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "liliana.cruz@carvajal.com"], ["LIMIT", 1]]
+  ↳ app/controllers/v1/sessions_controller.rb:3
+Completed 500 Internal Server Error in 194ms (ActiveRecord: 17.4ms)
+
+
+  
+NoMethodError (undefined method `now' for Date:Class
+Did you mean?  new):
+  
+app/controllers/v1/sessions_controller.rb:6:in `create'
+Started POST "/v1/sessions?email=liliana.cruz@carvajal.com&password=[FILTERED]" for 127.0.0.1 at 2018-09-15 18:50:03 -0500
+Processing by V1::SessionsController#create as */*
+  Parameters: {"email"=>"liliana.cruz@carvajal.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (10.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "liliana.cruz@carvajal.com"], ["LIMIT", 1]]
+  ↳ app/controllers/v1/sessions_controller.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/v1/sessions_controller.rb:6
+  [1m[36mUser Update (53.5ms)[0m  [1m[33mUPDATE "users" SET "last_sign_in_at" = ?, "last_sign_in_ip" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["last_sign_in_at", "2018-09-15 00:00:00"], ["last_sign_in_ip", "127.0.0.1"], ["updated_at", "2018-09-15 23:50:04.283313"], ["id", 6]]
+  ↳ app/controllers/v1/sessions_controller.rb:6
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/v1/sessions_controller.rb:6
+Completed 201 Created in 279ms (Views: 0.4ms | ActiveRecord: 66.3ms)
+
+
+Started POST "/v1/sessions?email=liliana.cruz@carvajal.com&password=[FILTERED]" for 127.0.0.1 at 2018-09-15 18:50:46 -0500
+Processing by V1::SessionsController#create as */*
+  Parameters: {"email"=>"liliana.cruz@carvajal.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (4.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "liliana.cruz@carvajal.com"], ["LIMIT", 1]]
+  ↳ app/controllers/v1/sessions_controller.rb:3
+Completed 401 Unauthorized in 154ms (ActiveRecord: 4.4ms)
+
+
+Started POST "/v1/sessions?email=liliana.cruz@carvajal.com&password=[FILTERED]" for 127.0.0.1 at 2018-09-15 18:51:34 -0500
+Processing by V1::SessionsController#create as */*
+  Parameters: {"email"=>"liliana.cruz@carvajal.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (15.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "liliana.cruz@carvajal.com"], ["LIMIT", 1]]
+  ↳ app/controllers/v1/sessions_controller.rb:3
+Completed 422 Unprocessable Entity in 191ms (Views: 0.2ms | ActiveRecord: 16.2ms)
+
+
+Started POST "/v1/sessions?email=liliana.cruz@carvajal.com&password=[FILTERED]" for 127.0.0.1 at 2018-09-15 18:51:56 -0500
+Processing by V1::SessionsController#create as */*
+  Parameters: {"email"=>"liliana.cruz@carvajal.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "liliana.cruz@carvajal.com"], ["LIMIT", 1]]
+  ↳ app/controllers/v1/sessions_controller.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/v1/sessions_controller.rb:6
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/v1/sessions_controller.rb:6
+Completed 201 Created in 153ms (Views: 0.3ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/v1/sessions?email=liliana.cruz@carvajal.com&password=[FILTERED]" for 127.0.0.1 at 2018-09-15 18:52:34 -0500
+Processing by V1::SessionsController#create as */*
+  Parameters: {"email"=>"liliana.cruz@carvajal.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "liliana.cruz@carvajal.com"], ["LIMIT", 1]]
+  ↳ app/controllers/v1/sessions_controller.rb:3
+Completed 422 Unprocessable Entity in 148ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/v1/sessions?email=liliana.cruz@carvajal.com&password=[FILTERED]" for 127.0.0.1 at 2018-09-15 18:53:27 -0500
+Processing by V1::SessionsController#create as */*
+  Parameters: {"email"=>"liliana.cruz@carvajal.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "liliana.cruz@carvajal.com"], ["LIMIT", 1]]
+  ↳ app/controllers/v1/sessions_controller.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/v1/sessions_controller.rb:6
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/v1/sessions_controller.rb:6
+Completed 201 Created in 147ms (Views: 0.6ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/v1/sessions?email=liliana.cruz@carvajal.com&password=[FILTERED]" for 127.0.0.1 at 2018-09-15 18:54:22 -0500
+Processing by V1::SessionsController#create as */*
+  Parameters: {"email"=>"liliana.cruz@carvajal.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (18.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "liliana.cruz@carvajal.com"], ["LIMIT", 1]]
+  ↳ app/controllers/v1/sessions_controller.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/v1/sessions_controller.rb:6
+  [1m[36mUser Update (21.7ms)[0m  [1m[33mUPDATE "users" SET "last_sign_in_at" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["last_sign_in_at", "2018-09-15 23:54:22.503064"], ["updated_at", "2018-09-15 23:54:22.505155"], ["id", 6]]
+  ↳ app/controllers/v1/sessions_controller.rb:6
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/v1/sessions_controller.rb:6
+Completed 201 Created in 235ms (Views: 0.5ms | ActiveRecord: 43.8ms)
+
+
+Started POST "/v1/sessions?email=liliana.cruz@carvajal.com&password=[FILTERED]" for 127.0.0.1 at 2018-09-15 18:55:21 -0500
+Processing by V1::SessionsController#create as */*
+  Parameters: {"email"=>"liliana.cruz@carvajal.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (14.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "liliana.cruz@carvajal.com"], ["LIMIT", 1]]
+  ↳ app/controllers/v1/sessions_controller.rb:3
+Completed 500 Internal Server Error in 195ms (ActiveRecord: 15.7ms)
+
+
+  
+NoMethodError (undefined method `currentstrftime' for Time:Class):
+  
+app/controllers/v1/sessions_controller.rb:6:in `create'
+Started POST "/v1/sessions?email=liliana.cruz@carvajal.com&password=[FILTERED]" for 127.0.0.1 at 2018-09-15 18:55:36 -0500
+Processing by V1::SessionsController#create as */*
+  Parameters: {"email"=>"liliana.cruz@carvajal.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "liliana.cruz@carvajal.com"], ["LIMIT", 1]]
+  ↳ app/controllers/v1/sessions_controller.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/v1/sessions_controller.rb:6
+  [1m[36mUser Update (21.6ms)[0m  [1m[33mUPDATE "users" SET "last_sign_in_at" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["last_sign_in_at", "2018-09-15 23:55:36"], ["updated_at", "2018-09-15 23:55:36.374775"], ["id", 6]]
+  ↳ app/controllers/v1/sessions_controller.rb:6
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/v1/sessions_controller.rb:6
+Completed 201 Created in 237ms (Views: 0.4ms | ActiveRecord: 25.3ms)
+
+
+Started POST "/v1/sessions?email=liliana.cruz@carvajal.com&password=[FILTERED]" for 127.0.0.1 at 2018-09-15 18:55:50 -0500
+Processing by V1::SessionsController#create as */*
+  Parameters: {"email"=>"liliana.cruz@carvajal.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "liliana.cruz@carvajal.com"], ["LIMIT", 1]]
+  ↳ app/controllers/v1/sessions_controller.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/v1/sessions_controller.rb:6
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "last_sign_in_at" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["last_sign_in_at", "2018-09-15 18:55:51"], ["updated_at", "2018-09-15 23:55:51.074061"], ["id", 6]]
+  ↳ app/controllers/v1/sessions_controller.rb:6
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/v1/sessions_controller.rb:6
+Completed 201 Created in 179ms (Views: 0.4ms | ActiveRecord: 3.7ms)
+
+
+Started POST "/v1/sessions?email=liliana.cruz@carvajal.com&password=[FILTERED]" for 127.0.0.1 at 2018-09-15 18:59:06 -0500
+Processing by V1::SessionsController#create as */*
+  Parameters: {"email"=>"liliana.cruz@carvajal.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "liliana.cruz@carvajal.com"], ["LIMIT", 1]]
+  ↳ app/controllers/v1/sessions_controller.rb:3
+Completed 422 Unprocessable Entity in 184ms (Views: 0.7ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/v1/sessions?email=liliana.cruz@carvajal.co&password=[FILTERED]" for 127.0.0.1 at 2018-09-15 19:15:18 -0500
+  [1m[35m (20.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/andresburgos/.rvm/gems/ruby-2.3.3/gems/rack-cors-1.0.2/lib/rack/cors.rb:97
+Processing by V1::SessionsController#create as */*
+  Parameters: {"email"=>"liliana.cruz@carvajal.co", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (24.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "liliana.cruz@carvajal.co"], ["LIMIT", 1]]
+  ↳ app/controllers/v1/sessions_controller.rb:3
+Completed 422 Unprocessable Entity in 77ms (Views: 13.8ms | ActiveRecord: 25.8ms)
+
+
+Started POST "/v1/sessions?email=liliana.cruz@carvajal.com&password=[FILTERED]" for 127.0.0.1 at 2018-09-15 19:15:24 -0500
+Processing by V1::SessionsController#create as */*
+  Parameters: {"email"=>"liliana.cruz@carvajal.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (7.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "liliana.cruz@carvajal.com"], ["LIMIT", 1]]
+  ↳ app/controllers/v1/sessions_controller.rb:3
+Completed 422 Unprocessable Entity in 322ms (Views: 0.2ms | ActiveRecord: 7.8ms)
+
+
+Started POST "/v1/sessions?email=liliana.cruz@carvajal.com&password=[FILTERED]" for 127.0.0.1 at 2018-09-15 19:15:31 -0500
+Processing by V1::SessionsController#create as */*
+  Parameters: {"email"=>"liliana.cruz@carvajal.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "liliana.cruz@carvajal.com"], ["LIMIT", 1]]
+  ↳ app/controllers/v1/sessions_controller.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/v1/sessions_controller.rb:5
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE "users" SET "last_sign_in_at" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["last_sign_in_at", "2018-09-16 19:15:31"], ["updated_at", "2018-09-16 00:15:31.860000"], ["id", 6]]
+  ↳ app/controllers/v1/sessions_controller.rb:5
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/v1/sessions_controller.rb:5
+Completed 201 Created in 222ms (Views: 0.5ms | ActiveRecord: 3.1ms)
+
+
+Started POST "/v1/sessions?email=liliana.cruz@carvajal.com&password=[FILTERED]" for 127.0.0.1 at 2018-09-15 19:27:56 -0500
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/andresburgos/.rvm/gems/ruby-2.3.3/gems/rack-cors-1.0.2/lib/rack/cors.rb:97
+Processing by V1::SessionsController#create as */*
+  Parameters: {"email"=>"liliana.cruz@carvajal.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (25.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "liliana.cruz@carvajal.com"], ["LIMIT", 1]]
+  ↳ app/controllers/v1/sessions_controller.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/v1/sessions_controller.rb:5
+  [1m[36mUser Update (0.9ms)[0m  [1m[33mUPDATE "users" SET "last_sign_in_at" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["last_sign_in_at", "2018-09-16 19:27:56"], ["updated_at", "2018-09-16 00:27:56.692457"], ["id", 6]]
+  ↳ app/controllers/v1/sessions_controller.rb:5
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/v1/sessions_controller.rb:5
+Completed 201 Created in 336ms (Views: 28.5ms | ActiveRecord: 29.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-15 19:54:48 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/andresburgos/.rvm/rubies/ruby-2.3.3/lib/ruby/gems/2.3.0/gems/railties-5.2.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/andresburgos/.rvm/rubies/ruby-2.3.3/lib/ruby/gems/2.3.0/gems/railties-5.2.1/lib/rails/templates/rails/welcome/index.html.erb (10.9ms)
+Completed 200 OK in 102ms (Views: 46.1ms | ActiveRecord: 0.0ms)
+
+
